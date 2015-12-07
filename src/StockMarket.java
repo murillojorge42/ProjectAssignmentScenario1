@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,6 +14,7 @@ public class StockMarket extends AnyType {
 
     public StockMarket(int id) {
         super(id);
+        mStocks = new ArrayList<Stock>();
     }
 
     @Override
@@ -65,5 +67,10 @@ public class StockMarket extends AnyType {
 
     public void setCloseHour(int closeHour) {
         mCloseHour = closeHour;
+    }
+
+    @Override
+    public String toString() {
+        return mName;
     }
 }

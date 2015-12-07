@@ -18,11 +18,11 @@ public class StockContext extends AnyContext{
 
     private Date mStartDate;
     private Date mEndDate;
-
     private List<StockMarket> mMarkets;
 
     public StockContext(int id) {
         super(id);
+        mMarkets = new ArrayList<StockMarket>();
     }
 
     public Date getStartDate() {

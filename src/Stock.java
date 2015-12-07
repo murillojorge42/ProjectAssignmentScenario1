@@ -4,12 +4,12 @@
 public class Stock extends AnyEntity {
     
     private String mCode;
-    private StockMarket mStockMarket;
+    private String mCompanyName;
 
-    public Stock(int id, String code, StockMarket stockMarket) {
+    public Stock(int id, String code, String companyName) {
         super(id);
         mCode = code;
-        mStockMarket = stockMarket;
+        mCompanyName = companyName;
     }
 
     public String getCode() {
@@ -20,11 +20,16 @@ public class Stock extends AnyEntity {
         mCode = code;
     }
 
-    public StockMarket getStockMarket() {
-        return mStockMarket;
+    public String getCompanyName() {
+        return mCompanyName;
     }
 
-    public void setStockMarket(StockMarket stockMarket) {
-        mStockMarket = stockMarket;
+    public void setCompanyName(String companyName) {
+        mCompanyName = companyName;
+    }
+
+    @Override
+    public String toString() {
+        return mCode+":"+mCompanyName;
     }
 }

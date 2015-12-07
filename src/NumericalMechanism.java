@@ -6,13 +6,13 @@ import java.util.List;
  */
 public class NumericalMechanism extends AnyMechanism {
 
-    public NumericalMechanism(int id) {
-        super(id);
+    public NumericalMechanism(int id, AnyAspect anyAspect) {
+        super(id, anyAspect);
     }
 
     @Override
-    public AnyForm produceReport(AnyAspect aspect, AnyContext context) {
-        TrendingAspect trendingAspect = (TrendingAspect) aspect;
+    public AnyForm produceReport(AnyContext context) {
+        TrendingAspect trendingAspect = (TrendingAspect) mAnyAspect;
         StockContext stockContext = (StockContext) context;
         TrendingReport report = new TrendingReport(0);
 
